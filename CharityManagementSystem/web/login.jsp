@@ -1,8 +1,3 @@
-<%-- 
-    Document   : login
-    Created on : 10 Nov, 2024, 1:05:45 PM
-    Author     : sahar
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

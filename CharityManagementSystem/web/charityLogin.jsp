@@ -15,5 +15,6 @@ pageEncoding="UTF-8"%>
 required><br>
 <button type="submit">Login</button>
 </form>
+    <a href="./charityRegister.jsp"> Dont have an account? Register</a>
 </body>
 </html>

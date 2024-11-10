@@ -1,4 +1,4 @@
-<%@ page import="dao.DonationDAO, models.Donation, java.util.List" %>
+<%@ page import="dao.DonorDAO, models.Donor, java.util.List" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -21,8 +21,8 @@ pageEncoding="UTF-8"%>
 <%
 int donorId =
 ((Donor)session.getAttribute("donor")).getDonorId();
-List<Donation> donations =
-DonationDAO.getDonationsByDonorId(donorId);
+List<Donor> donations =
+DonorDAO.getDonationsByDonorId(donorId);
 for (Donation donation : donations) {
 %>
 <tr>

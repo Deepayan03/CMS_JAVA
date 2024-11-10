@@ -7,14 +7,15 @@ public class Charity {
     private String phone;
     private String address;
     private String status;
-
-    public Charity(int charityId, String charityName, String email, String phone, String address, String status) {
+    private String password;
+    public Charity(int charityId, String charityName, String email, String phone, String address, String status , String password) {
         this.charityId = charityId;
         this.charityName = charityName;
         this.email = email;
         this.phone = phone;
         this.address = address;
         this.status = status;
+        this.password = password;
     }
 
     // Getter and Setter for charityId
@@ -69,5 +70,11 @@ public class Charity {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+    public void setPassword(String password){
+        this.password = password;
+    }
+    public String getPassword(){
+        return password;
     }
 }

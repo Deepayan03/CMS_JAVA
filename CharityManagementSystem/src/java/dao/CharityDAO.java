@@ -5,7 +5,7 @@ import models.Charity;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import org.mindrot.jbcrypt.BCrypt;  // for password hashing
+
 
 public class CharityDAO {
 
@@ -21,7 +21,7 @@ public class CharityDAO {
             stmt.setString(5, charity.getStatus());
 
             // Securely hash the password before storing
-            String hashedPassword = BCrypt.hashpw(charity.getPassword(), BCrypt.gensalt());
+            String hashedPassword = charity.getPassword();
             stmt.setString(6, hashedPassword);
 
             stmt.executeUpdate();
@@ -42,15 +42,16 @@ public class CharityDAO {
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
-                String storedHash = rs.getString("password");
-                if (BCrypt.checkpw(password, storedHash)) {
+                String storedPassword = rs.getString("password");
+                if (storedPassword.equals(password)) {
                     charity = new Charity(
                         rs.getInt("charity_id"),
                         rs.getString("charity_name"),
                         email,
                         rs.getString("phone"),
                         rs.getString("address"),
-                        rs.getString("status")
+                        rs.getString("status"),
+                            rs.getString("password")
                     );
                 }
             }
@@ -75,7 +76,8 @@ public class CharityDAO {
                     rs.getString("email"),
                     rs.getString("phone"),
                     rs.getString("address"),
-                    rs.getString("status")
+                    rs.getString("status"),
+                     rs.getString("password")
                 ));
             }
         } catch (SQLException e) {

@@ -4,9 +4,9 @@ import java.util.Date;
 
 public class Transaction {
     private int transactionId;
-    private int donorId; // Add this if you need to track which donor made the transaction
+    private int donorId; 
     private double amount;
-    private Date date; // Ensure you're using the correct type for dates
+    private Date date; 
 
     // Constructor
     public Transaction() {}

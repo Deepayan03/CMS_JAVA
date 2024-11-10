@@ -24,31 +24,7 @@
         <servlet-name>CharityApprovalServlet</servlet-name>
         <servlet-class>controllers.CharityApprovalServlet</servlet-class>
     </servlet>
-    <servlet-mapping>
-        <servlet-name>AdminController</servlet-name>
-        <url-pattern>/AdminController</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>CharityController</servlet-name>
-        <url-pattern>/CharityController</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>DonorController</servlet-name>
-        <url-pattern>/DonorController</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>PaymentServlet</servlet-name>
-        <url-pattern>/PaymentServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ReceiptServlet</servlet-name>
-        <url-pattern>/ReceiptServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>CharityApprovalServlet</servlet-name>
-        <url-pattern>/CharityApprovalServlet</url-pattern>
-    </servlet-mapping>
-    <session-config>
+      <session-config>
         <session-timeout>
             30
         </session-timeout>

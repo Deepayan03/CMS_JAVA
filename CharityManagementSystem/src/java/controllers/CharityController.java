@@ -30,7 +30,7 @@ public class CharityController extends HttpServlet {
             String password = request.getParameter("password");
 
             // Create Charity object with status "Inactive"
-            Charity charity = new Charity(0, name, email, phone, address, "Inactive");
+            Charity charity = new Charity(0, name, email, phone, address, "Inactive" , password);
 
             // Register the charity
             boolean isRegistered = CharityDAO.register(charity);
